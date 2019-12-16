@@ -1,0 +1,12 @@
+#SCsub
+
+Import('env')
+
+env_clingo = env
+
+env_clingo.add_source_files(env.modules_sources, "*.cpp")
+
+env_clingo.Append(CPPPATH="clingo/libclingo")
+env_clingo.Append(LIBPATH=['libpath'])
+env_clingo.Append(LIBS=['clingo'])
+

@@ -1,0 +1,19 @@
+#ifndef GODOT_CLINGOM_H
+#define GODOT_CLINGOM_H
+
+#include "core/reference.h"
+
+class ClingoM: public Reference{
+	GDCLASS(ClingoM, Reference);
+
+protected:
+	static void _bind_methods();
+
+public:
+	bool say_text(String txt);
+	godot::Variant getPredicades(String txt);
+
+	ClingoM();
+};
+
+#endif
